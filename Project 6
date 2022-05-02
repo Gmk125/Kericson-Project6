@@ -1,0 +1,3 @@
+def wordcounter(data_sheet):
+    #intialazie adictionary with keys "windows","mac","lineux"
+num_platforms=("Windows":0,"MacOS:0""Linux:0")
