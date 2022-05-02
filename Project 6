@@ -1,3 +1,66 @@
-def wordcounter(data_sheet):
-    #intialazie adictionary with keys "windows","mac","lineux"
-num_platforms=("Windows":0,"MacOS:0""Linux:0")
+
+def main():
+    user_choice=0
+    while user_choice!=7:
+
+        user_choice=int(input('Would you like to:\n\t'
+                            '1 Find Most Players\n\t'
+                             '2 Find Age Restricted Games \n\t'
+                              '3 Find Often Recommended Game \n\t'
+                              '4 Find Well Played Games\n\t'
+                              '5 Find Count For System \n\t'
+                              '6 Look Up Data\n\t'
+                              '7 Quit\n\t'))
+
+        if user_choice==1:
+            print("Hi")
+        elif user_choice == 2:
+            print("Hi")
+        elif user_choice == 3:
+            print("Hi")
+        elif user_choice == 4:
+            print("Hi")
+        elif user_choice == 5:
+            print("Hi")
+        elif user_choice == 6:
+            print("Hi")
+        elif user_choice == 7:
+            print("Hi")
+            break
+
+def find_most_players():
+    wb=openpyxl.load_workbook('gamae-features.xlsx')
+    worksheet=wb.activr
+    system=int(input('Which system do you want to consider:\n\t'
+                     '1:Windows:\n\t'
+                     '2:Linux:\n\t'
+                     '3:Mac'))
+
+    player_count=0
+    game_title=[]
+    release_date=[]
+
+    for row in worksheet.inter_rows(1,worksheet.max_row):
+            if system== 1 and row[26].value=='True':
+                print(row[17].value)
+            elif system==2 and row[27].value=='True':
+                print (row[17].value)
+            elif system == 3 and row[28].value == 'True':
+                print(row[17].value)
+
+    if system==1:
+        print(f' the game with the most players is{game_title[-1]}realease on{release_date[-1]}'
+        f'with a a total player count of{player_count}')
+
+    elif system== 2:
+        print(f' the game with the most players is{game_title[-1]}realease on{release_date[-1]}'
+           f'with a a total player count of{player_count}')
+
+
+    elif system== 3:
+        print(f' the game with the most players is{game_title[-1]}realease on{release_date[-1]}'
+           f'with a a total player count of{player_count}')
+
+
+
+main()
